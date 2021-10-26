@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.myapplication3.dogapi.model.DogImageUi
 
 import com.example.myapplication3.databinding.ActivityDogImageBinding
@@ -39,12 +38,12 @@ class DogImageQuoteViewHolder(
 
     fun bind(DogImageUi: DogImageUi) {
         ui = DogImageUi
-        Glide.with(itemView.context)
-            .load(DogImageUi.iconUrl)
-            .into(binding.itemdogImageIcon)
-
 
         binding.itemdogImageQuote.text = DogImageUi.quote
+        binding.typeJoke.text = DogImageUi.typeJoke
+        binding.firstline.text = DogImageUi.firstLine
+        binding.secondline.text = DogImageUi.secondLine
+        binding.safe.text = DogImageUi.safe
     }
 }
 

@@ -9,7 +9,10 @@ import com.google.gson.annotations.SerializedName
 /** Object use for Ui */
 data class DogImageUi(
     val quote: String,
-    val iconUrl: String
+    val typeJoke: String,
+    val firstLine : String,
+    val secondLine : String,
+    val safe : String
 )
 
 /** Object use for room */
@@ -17,10 +20,11 @@ data class DogImageUi(
 data class DogImageRoom(
     @ColumnInfo(name = "quote_text")
     val quote: String,
+    val typeJoke: String,
+    val firstLine : String,
+    val secondLine : String,
+    val safe : String
 
-
-    @ColumnInfo(name = "quote_icon_url")
-    val iconUrl: String
 ) {
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
@@ -29,11 +33,18 @@ data class DogImageRoom(
 /** Object use for retrofit */
 data class DogImageRetrofit(
     @Expose
-    @SerializedName("status")
+    @SerializedName("category")
     val quote: String,
-
-
     @Expose
-    @SerializedName("message")
-    val iconUrl: String
+    @SerializedName("type")
+    val typeJoke: String,
+    @Expose
+    @SerializedName("setup")
+    val firstLine: String,
+    @Expose
+    @SerializedName("delivery")
+    val secondLine: String,
+    @Expose
+    @SerializedName("safe")
+    val safe: String
 )

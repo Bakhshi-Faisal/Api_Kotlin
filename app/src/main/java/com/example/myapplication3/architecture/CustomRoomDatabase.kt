@@ -9,7 +9,7 @@ import com.example.myapplication3.dogapi.model.DogImageRoom
     entities = [
         DogImageRoom::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class CustomRoomDatabase : RoomDatabase() {

@@ -35,7 +35,10 @@ class DogImageQuoteRepository {
     private fun DogImageRetrofit.toRoom(): DogImageRoom {
         return DogImageRoom(
             quote = quote,
-            iconUrl = iconUrl
+            typeJoke = typeJoke,
+            firstLine = firstLine,
+            secondLine = secondLine,
+            safe = safe
         )
 
     }

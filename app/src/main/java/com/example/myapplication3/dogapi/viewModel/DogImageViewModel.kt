@@ -39,7 +39,11 @@ private fun List<DogImageRoom>.toUi(): List<DogImageUi> {
     return asSequence().map {
         DogImageUi(
             quote = it.quote,
-            iconUrl = it.iconUrl
+            typeJoke = it.typeJoke,
+            firstLine = it.firstLine,
+            secondLine = it.secondLine,
+            safe = it.safe
+
         )
     }.toList()
 
