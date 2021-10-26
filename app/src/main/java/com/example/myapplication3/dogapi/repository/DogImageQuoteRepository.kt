@@ -34,7 +34,8 @@ class DogImageQuoteRepository {
 
     private fun DogImageRetrofit.toRoom(): DogImageRoom {
         return DogImageRoom(
-            quote = quote
+            quote = quote,
+            iconUrl = iconUrl
         )
 
     }
